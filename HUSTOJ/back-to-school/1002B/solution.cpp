@@ -1,7 +1,14 @@
 #include<bits/stdc++.h>
-long long a,b;
+using namespace std;
+long long ans=1,b,m,p;
 int main()
 {
-    scanf("%lld%lld",&a,&b);
-    printf("%.0f",pow(a,b));
+    scanf("%lld%lld%lld",&b,&m,&p);
+    while(m>0)
+    {
+        if(m&1)ans=ans*b%p;
+        b=b*b%p;
+        m>>=1;
+    }
+    printf("%lld",ans%p);
 }
