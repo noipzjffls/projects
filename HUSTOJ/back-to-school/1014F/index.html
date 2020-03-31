@@ -42,19 +42,19 @@
 <p data-source-line="72">通过样例可知，这道题需要分类讨论。因此我们必须要注意，要考虑全面。</p>
 <h4 id="div-idcase1221-分类讨论1div" data-source-line="73"><a class="markdownIt-Anchor" href="#div-idcase1221-分类讨论1div"></a><div id="case1">2.2.1 分类讨论1</div></h4>
 <p data-source-line="74">先考虑最简单的情况。我们不妨以点A为圆心，AB长为半径画弧。此时圆与y轴有两个交点，但其中一个是B，所以只能取另一个，这个点就是M的第一种情况，如图：</p>
-<p data-source-line="76"><img data-src="%2Fcase1-1.jpg" alt="" src="http://case1-1.jpg/?ynotemdtimestamp=1585613269849" data-processed="%2Fcase1-1.jpg"></p>
+<p data-source-line="76"><img data-src="case1-1.jpg" alt="" src="http://case1-1.jpg/?ynotemdtimestamp=1585613269849" data-processed="%2Fcase1-1.jpg"></p>
 <p data-source-line="78">在这种情况，我们得到了菱形的其中两条边——AB和AM。接着，我们只需要过M作AB，过B作AM的平行线，这两条线交于菱形的另一个顶点，也就是符合条件的N。即：</p>
-<p data-source-line="80"><img data-src="%2Fcase1-2.jpg" alt="" src="http://case1-2.jpg/?ynotemdtimestamp=1585613269849" data-processed="%2Fcase1-2.jpg"></p>
+<p data-source-line="80"><img data-src="case1-2.jpg" alt="" src="http://case1-2.jpg/?ynotemdtimestamp=1585613269849" data-processed="%2Fcase1-2.jpg"></p>
 <p data-source-line="82">【原理与可行性】两条平行线构造了平行四边形，而邻边相等提供了菱形的条件。</p>
 <h4 id="div-idcase2222-分类讨论2div" data-source-line="83"><a class="markdownIt-Anchor" href="#div-idcase2222-分类讨论2div"></a><div id="case2">2.2.2 分类讨论2</div></h4>
 <p data-source-line="84">接着是第二种情况——以B为圆心，BA长为半径画弧。这个时候有两个交点——我们用M1、M2表示：</p>
-<p data-source-line="86"><img data-src="%2Fcase2-1.jpg" alt="" src="http://case2-1.jpg/?ynotemdtimestamp=1585613269849" data-processed="%2Fcase2-1.jpg"></p>
+<p data-source-line="86"><img data-src="case2-1.jpg" alt="" src="http://case2-1.jpg/?ynotemdtimestamp=1585613269849" data-processed="%2Fcase2-1.jpg"></p>
 <p data-source-line="88">接着以第1种分类讨论同法作菱形：</p>
-<p data-source-line="90"><img data-src="%2Fcase2-2.jpg" alt="" src="http://case2-2.jpg/?ynotemdtimestamp=1585613269849" data-processed="%2Fcase2-2.jpg"></p>
+<p data-source-line="90"><img data-src="case2-2.jpg" alt="" src="http://case2-2.jpg/?ynotemdtimestamp=1585613269849" data-processed="%2Fcase2-2.jpg"></p>
 <p data-source-line="92">在这个条件下，有两种情况的M和N。</p>
 <h4 id="div-idcase3223-分类讨论3div" data-source-line="93"><a class="markdownIt-Anchor" href="#div-idcase3223-分类讨论3div"></a><div id="case3">2.2.3 分类讨论3</div></h4>
 <p data-source-line="94">然后我们作AB的垂直平分线交y轴与一个点，这个点也是M的一个答案。这时就有AM=BM，然后继续作菱形即可：</p>
-<p data-source-line="96"><img data-src="%2Fcase3.jpg" alt="" src="http://case3.jpg/?ynotemdtimestamp=1585613269849" data-processed="%2Fcase3.jpg"></p>
+<p data-source-line="96"><img data-src="case3.jpg" alt="" src="http://case3.jpg/?ynotemdtimestamp=1585613269849" data-processed="%2Fcase3.jpg"></p>
 <p data-source-line="98">这是第三种情况（共四个满足条件）。</p>
 <h2 id="div-idalgorithm23-算法div" data-source-line="99"><a class="markdownIt-Anchor" href="#div-idalgorithm23-算法div"></a><div id="algorithm">2.3 算法</div></h2>
 <p data-source-line="100">我们可以从特殊入手，就假定k=2，b=4，这样的话算法就是这样的：<a href="https://www.luogu.com.cn/paste/85llk8ob" target="_blank">传送门</a>。
