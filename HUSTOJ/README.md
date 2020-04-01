@@ -1,3 +1,4 @@
+/*
 # <u><center><font color=red>源代码快速查看</font></center></u>
 ## <font color=green>开学练习赛</font>
 ##### [1001A:求商](https://raw.githubusercontent.com/noipzjffls/projects/master/HUSTOJ/back-to-school/1001A/solution.cpp)
@@ -16,3 +17,5 @@
 ##### [1007A:兵](https://raw.githubusercontent.com/noipzjffls/projects/master/HUSTOJ/labor-day/1007A/solution.cpp)
 ##### [1010B:大力士](https://raw.githubusercontent.com/noipzjffls/projects/master/HUSTOJ/labor-day/1010B/solution.cpp)
 ##### [1015C:使命](https://raw.githubusercontent.com/noipzjffls/projects/master/HUSTOJ/labor-day/1015C/solution.cpp)
+*/
+# 官网 <onlinejudge.ngrok2.xiaomiqiu.cn>
