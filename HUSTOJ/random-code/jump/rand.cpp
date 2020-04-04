@@ -17,7 +17,7 @@ char filename[][10]={"","1.in","2.in","3.in","4.in","5.in","6.in","7.in","8.in",
 int main()
 {
     srand(time(NULL));
-    for(datanum=4;datanum<=5;datanum++)
+    for(datanum=1;datanum<=10;datanum++)
     {
         freopen(filename[datanum],"w",stdout);
         int typenum=type[datanum],n=random(rangen[typenum][0],rangen[typenum][1]),d=random(ranged[typenum][0],rangen[typenum][1]),i=1,k=random(1,1e9);
