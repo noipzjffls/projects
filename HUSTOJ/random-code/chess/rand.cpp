@@ -9,7 +9,7 @@ char filename[][10]={"","1.in","2.in","3.in","4.in","5.in","6.in","7.in","8.in",
 int main()
 {
     srand((time(NULL)));
-    for(datanum=9;datanum<=9;datanum++)
+    for(datanum=1;datanum<=10;datanum++)
     {
         freopen(filename[datanum],"w",stdout);
         memset(a,0,sizeof(a));
