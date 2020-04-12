@@ -5,6 +5,7 @@
         "iosfwd": "cpp",
         "string": "cpp",
         "algorithm": "c",
-        "random": "c"
+        "random": "c",
+        "queue": "cpp"
     }
 }
