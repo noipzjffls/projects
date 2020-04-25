@@ -1,11 +1,6 @@
 {
     "files.associations": {
-        "ios": "cpp",
         "cstdio": "cpp",
-        "iosfwd": "cpp",
-        "string": "cpp",
-        "algorithm": "c",
-        "random": "c",
-        "queue": "cpp"
+        "string": "cpp"
     }
 }
