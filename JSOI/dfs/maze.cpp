@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int m,n,x,y,dx[]={0,0,-1,1},dy[]={-1,1,0,0},route[2000001],flag[21][21];
+int m,n,x,y,dx[]={0,0,-1,1},dy[]={-1,1,0,0},route[401],flag[21][21];
 bool vis[21][21];
 void print(int k)
 {
