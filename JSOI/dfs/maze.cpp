@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int m,n,x,y,dx[]={0,0,-1,1},dy[]={-1,1,0,0},route[401],flag[21][21];
+int m,n,x,y,dx[]={0,0,-1,1},dy[]={-1,1,0,0},route[401],maps[21][21];
 bool vis[21][21];
 void print(int k)
 {
@@ -23,7 +23,7 @@ void dfs(int dep)
     for(int i=0;i<4;i++)
     {
         int nx=x+dx[i],ny=y+dy[i];
-        if(nx>0&&nx<=n&&ny>0&&ny<=m&&!flag[nx][ny]&&!vis[nx][ny])
+        if(nx>0&&nx<=n&&ny>0&&ny<=m&&!maps[nx][ny]&&!vis[nx][ny])
         {
             vis[nx][ny]=1;
             x=nx,y=ny,route[dep]=i;
@@ -41,7 +41,7 @@ int main()
     {
         for(int j=1;j<=m;j++)
         {
-            scanf("%1d",&flag[i][j]);
+            scanf("%1d",&maps[i][j]);
         }
     }
     vis[1][1]=true;
