@@ -35,21 +35,17 @@ void dfs(int dep)
 }
 int main()
 {
-    while(cin>>n)
+    scanf("%d",&n);
+    m=n;
+    for(int i=1;i<=n;i++)
     {
-        memset(vis,false,sizeof(vis));
-        memset(route,0,sizeof(route));
-        m=n;
-        for(int i=1;i<=n;i++)
+        for(int j=1;j<=m;j++)
         {
-            for(int j=1;j<=m;j++)
-            {
-                scanf("%1d",&flag[i][j]);
-            }
+            scanf("%1d",&flag[i][j]);
         }
-        vis[1][1]=true;
-        x=y=1;
-        dfs(1);
     }
+    vis[1][1]=true;
+    x=y=1;
+    dfs(1);
     return 0;
 }
