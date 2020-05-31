@@ -1,0 +1,5 @@
+void merge(int a,int b)
+{
+    int fa=find(a),fb=find(b);
+    if(fa!=fb)f[fa]=fb;
+}

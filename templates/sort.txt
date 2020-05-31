@@ -1,0 +1,17 @@
+void binarysearch(int left,int right)
+{
+    int mid=a[(left+right)/2],i=left,j=right;
+    do
+    {
+        while(a[i]<mid)i++;
+        while(a[j]>mid)j--;
+        if(i<=j)
+        {
+            swap(a[i],a[j]);
+            i++;
+            j--;
+        }
+    }while(i<=j);
+    if(left<j)binarysearch(left,j);
+    if(right>i)binarysearch(i,right);
+}
