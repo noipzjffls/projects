@@ -16,11 +16,7 @@ string ans(int x)
         else return "+"+f[x];
     }
     int p=log2(x),q=1<<p;
-    if(q==x)
-    {
-        if(p==1)return "2";
-        return f[x]="2("+ans(p)+")";
-    }
+    if(q==x)return f[x]="2("+ans(p)+")";
     return f[x]=ans(q)+'+'+ans(x-q);
 }
 int main()
