@@ -21,13 +21,13 @@ long long read()
 }
 int main()
 {
-	scanf("%d%d",&n,&c);
-	for(int i=1;i<=n;i++)
-	{
-		a[i]=read();
-		m[a[i]]++;
-	}
-	for(int i=1;i<=n;i++)ans+=m[a[i]-c];
-	printf("%lld",ans);
-	return 0;
+    scanf("%d%d",&n,&c);
+    for(int i=1;i<=n;i++)
+    {
+        a[i]=read();
+        m[a[i]]++;
+    }
+    for(int i=1;i<=n;i++)ans+=m[a[i]-c];
+    printf("%lld",ans);
+    return 0;
 }
