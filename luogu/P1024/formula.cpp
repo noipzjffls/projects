@@ -13,6 +13,6 @@ int main()
     x[2]=(-b+sqrt(A)*(cos(theta/3)+sqrt(3)*sin(theta/3)))/3/a;
     x[3]=(-b+sqrt(A)*(cos(theta/3)-sqrt(3)*sin(theta/3)))/3/a;
     sort(x+1,x+4);
-    printf("%.2f %.2f %.2f",x[1],x[2],x[3]);
+    printf("%.2lf %.2lf %.2lf",x[1],x[2],x[3]);
     return 0;
 }
