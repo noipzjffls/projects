@@ -1,0 +1,8 @@
+void update(int x,int d)
+{
+    while(x<=n)
+    {
+        c[x]+=d;
+        x+=lowbit(x);
+    }
+}

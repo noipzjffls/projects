@@ -1,0 +1,18 @@
+void update(int x,int d)
+{
+    while(x<=n)
+    {
+        c[x]+=d;
+        x+=lowbit(x);
+    }
+}
+int sum(int x)
+{
+    int s=0;
+    while(x>0)
+    {
+        s+=c[x];
+        x-=lowbit(x);
+    }
+    return s;
+}
