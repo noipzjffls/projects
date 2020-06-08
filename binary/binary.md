@@ -661,11 +661,11 @@ int main()
 }
 ```
 
-### $\color{green}\text{本文章无注释AC代码大全}$
+## $\color{red}\text{总结}$
 
-[点击查看](https://www.luogu.com.cn/paste/jxyfhenq)
+总之，本次只介绍了二分最基本的用法。而二分这种思想，则将延续到后面的难题中，并得到充分的应用，因为二分是一种能优化查找效率的算法。
 
-### $\color{green}\text{推荐题目}$
+## $\color{red}\text{附加内容}$
 
 以下题目/题单中的题目都部分/全部使用了二分算法，包括二分查找、二分排序、二分寻找答案等。
 
@@ -674,3 +674,5 @@ int main()
 [【模板】快速排序](https://www.luogu.com.cn/problem/P1177)
 
 [[NOI Online \#2 入门组]未了](https://www.luogu.com.cn/problem/P6473)
+
+[本文章的所有无注释$AC$代码](https://www.luogu.com.cn/paste/jxyfhenq)
