@@ -10,7 +10,6 @@ char transfer(char ch)
         case 'b':return '-';
         case 'c':return '*';
     }
-    return '?';
 }
 int work(int a,int b,char opt)
 {
@@ -20,7 +19,6 @@ int work(int a,int b,char opt)
         case '-':return a-b;
         case '*':return a*b;
     }
-    return 1<<30;
 }
 int main()
 {
