@@ -215,7 +215,7 @@ int main()
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
-int read()//输入的数较多，可用快读
+int read()
 {
     int x=0,f=1;
     char ch=getchar();
@@ -266,7 +266,7 @@ int main()
 
 ```cpp
 int a[]={1,2,3,5,7,8};
-cout<<lower_bound(a,a+6,6)-a;
+cout<<lower_bound(a,a+6,6)-a<<endl;
 //第一个大于等于6的数是7，所以输出4
 cout<<lower_bound(a,a+6,9)-a;
 //第一个大于等于9的数不存在，所以输出6
@@ -321,8 +321,6 @@ int main()
     return 0;
 }
 ```
-
-期望得分：$100$分
 
 ### $\color{green}\text{No.3 A-B数对}$
 
@@ -592,15 +590,15 @@ double ans(double x)
 }
 void search(double l,double r)
 {
-    if(r-l<=1e-3)
+    if(r-l<=1e-3)//误差在一定范围内就认为没有问题
     {
-        printf("%.2lf ",l);
+        printf("%.2lf ",l);//输出并不再继续搜索
         return;
     }
     double mid=l+(r-l)*0.5,ans1=ans(l)*ans(mid),ans2=ans(mid)*ans(r);
     if(!ans(mid))printf("%.2lf ",mid);
     if(!ans(r))printf("%.2lf ",r);
-    if(ans1<0)search(l,mid);
+    if(ans1<0)search(l,mid);//体现递归思想
     else if(ans2<0)search(mid,r);
 }
 int main()
@@ -608,8 +606,8 @@ int main()
     cin>>a>>b>>c>>d;
     for(int i=-100;i<100;i++)
     {
-        if(ans(i)*ans(i+1)>0)continue;
-        search(i,i+1);
+        if(ans(i)*ans(i+1)>0)continue;//特判
+        search(i,i+1);//在[i,i+1)区间搜索
     }
     return 0;
 }
