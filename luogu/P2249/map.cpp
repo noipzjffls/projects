@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int n,m;
-map<int,int>M;
+unordered_map<int,int>M;
 int read()
 {
     int x=0,f=1;
