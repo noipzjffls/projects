@@ -180,11 +180,11 @@ int main()
     for(int i=1;i<=n;i++)a[i]=read();
     while(m--)
     {
-        int q=read(),l=1,r=n,mid,ans=-1;
+        int q=read(),l=1,r=n,mid,ans=-1;//ans初始为-1，区间为[1,n]
         while(l<=r)
         {
-            mid=l+r>>1;
-            if(a[mid]==q)
+            mid=l+r>>1;//位运算优先级<加法，括号可以省略
+            if(a[mid]==q)//找到之后就退出查找
             {
                 ans=mid;
                 break;
@@ -192,7 +192,12 @@ int main()
             else if(a[mid]<q)l=mid+1;
             else r=mid-1;
         }
-        for(int i=ans-1;i;i--)
+        if(ans==-1)//找不到就直接输出并进入下一次询问
+        {
+            printf("-1 ");
+            continue;
+        }
+        for(int i=ans-1;i;i--)//往回找最早出现的这个数
         {
             if(a[i]!=q)
             {
@@ -317,6 +322,70 @@ int main()
             continue;
         }
         printf("%d ",pos);//否则输出位置
+    }
+    return 0;
+}
+```
+
+#### $\color{orange}\text{【方法5】一一对应法（投机取巧，不适合训练二分算法）}$
+
+本题可以考虑用桶，但是每一个数不超过$10^9$，很明显会超范围。于是，考虑使用$\text{STL}$中的[$\text{map}$](https://en.cppreference.com/w/cpp/container/map)。这可以实现任意类型之间的一一对应，而且不必太考虑内存问题。
+
+【使用方法】
+
+```cpp
+#include<map>//需要引入头文件
+map<int,int>m1;//实现int和int之间一一对应的关系
+map<string,bool>m2;//实现string和int之间一一对应的关系
+m1[-1]=5;//这里可以把-1位置赋值为5
+m2["AC is fun"]=true;
+```
+
+通过上面的例子可以看出，六角括号中，前面一个变量类型可以代替数组下标的类型，而后面一个则是对应的值的类型。
+
+对于本题，我们可以直接使用`<int,int>`的对应。
+
+我们可以使用`unordered_map`来进行优化。该种类型是以哈希表形式存储的，有利于查找，优化后可以$\text{AC}$，但是直接用$\text{map}$的话会有三个点$\text{TLE}$，因为其内部存储的是红黑树，时间耗费较长。头文件是`#include<unordered_map>`。
+
+时间复杂度：$\mathcal O(n+m)$
+
+期望得分：$100$分
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+int n,m;
+unordered_map<int,int>M;//定义int,int类型的unordered_map
+int read()
+{
+    int x=0,f=1;
+    char ch=getchar();
+    while(ch<'0'||ch>'9')
+    {
+        if(ch=='-')f=-1;
+        ch=getchar();
+    }
+    while(ch>='0'&&ch<='9')
+    {
+        x=(x<<1)+(x<<3)+(ch^48);
+        ch=getchar();
+    }
+    return x*f;
+}
+int main()
+{
+    n=read();
+    m=read();
+    for(int i=1,x;i<=n;i++)
+    {
+        x=read();//把输入进来的数组当参数处理
+        if(M[x])continue;//如果M[x]不为0就是说明之前已经被标记过
+        M[x]=i;//如果没有标记就说明需要标记第一次出现的位置
+    }
+    while(m--)
+    {
+        int x=read();//读入待查找的数
+        printf("%d ",!M[x]?-1:M[x]);//如果M[x]=0（即未标记过）就输出-1，否则输出标记的位置
     }
     return 0;
 }
@@ -500,11 +569,11 @@ int main()
 }
 ```
 
-#### $\color{orange}\text{【方法4】STL:map映射实现（投机取巧，不适合训练二分算法）}$
+#### $\color{orange}\text{【方法4】STL:map映射实现（同样不适合训练二分算法）}$
 
-本方法在该题题解中也提到了。[$\text{map}$](https://en.cppreference.com/w/cpp/container/map)简单来说，能够实现任意类型之间的一一对应，而且不必太考虑大小问题。
+我们自然想到了$\text{STL:map}$的做法。
 
-题目要求$A-B=C$数对的个数，那么我们就不妨改为$A-C=B$的个数。定义一个<$\text{long long,int}$>（因为不开$\text{long long}$会爆掉），即$\text{long long}$对应$\text{int}$的$\text{map}$，名称为$m$。一开始输入$a_1,...,a_n$，对于每一个数组元素，让$m[a_i]$的值加$1$。
+题目要求$A-B=C$数对的个数，那么我们就不妨改为$A-C=B$的个数。定义一个`<long long,int>`（因为不开$\text{long long}$会爆掉），即$\text{long long}$对应$\text{int}$的$\text{map}$，名称为$m$。一开始输入$a_1,...,a_n$，对于每一个数组元素，让$m_{a_i}$的值加$1$。
 
 然后跑一遍$[1,n]$循环，看$m_{a_i-c}$的值是多少。计数器加上该值即可。
 
