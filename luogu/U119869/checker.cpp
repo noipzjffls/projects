@@ -29,7 +29,7 @@ int main(int argc,char* argv[])
     registerTestlibCmd(argc,argv);
     Ans=ans.readString();
     Out=ouf.readString();
-    if(Ans=="-1"&&Out=="-1")quitf(_ok, "The answer is correct.");
+    if(Ans==Out)quitf(_ok, "The answer is correct.");
     N=inf.readInt();
     for(int i=1;i<=N;i++)
     {
