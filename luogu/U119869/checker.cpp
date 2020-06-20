@@ -40,7 +40,7 @@ int main(int argc,char* argv[])
         }
     }
     bool flag=false,last=false; 
-    for(int x,y,p;;x=y=0)
+    for(int x,y,p;;)
     {
         p=Out.find("->");
         if(p!=string::npos)
@@ -59,7 +59,7 @@ int main(int argc,char* argv[])
             last=true;
         }
         if(outmap(x,y))quitf(_wa,"Illegal point! Error at point (%d,%d).",x,y);
-        if(flag&&!check(x,y,lx,ly))quitf(_wa,"Illegal transmittion. Error at point (%d,%d).",x,y);
+        if(flag&&!check(x,y,lx,ly))quitf(_wa,"Illegal transmittion! Error at point (%d,%d).",x,y);
         if(!flag&&(x!=1||y!=1))quitf(_wa,"Wrong starting point! Error at point (%d,%d).",x,y);
         if(last&&(x!=N||y!=N))quitf(_wa,"Wrong ending point! Error at point (%d,%d).",x,y);
         if(vis[x][y])quitf(_wa,"This point has been visited! Error at point (%d,%d).",x,y);
