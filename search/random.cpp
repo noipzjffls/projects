@@ -8,15 +8,15 @@ int main()
     {
         n=rand()%range+1;
         m=rand()%range+1;
-        cout<<n<<" "<<m<<endl;
+        printf("%d %d\n",n,m);
         for(int i=1;i<=n;i++)
         {
             for(int j=1;j<=m;j++)
             {
-                if(rand()%2)cout<<". ";
-                else cout<<"# ";
+                if(rand()&1)printf(". ");
+                else printf("# ");
             }
-            cout<<endl;
+            putchar('\n');
         }
     }
     return 0;
