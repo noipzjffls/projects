@@ -37,11 +37,6 @@ void dfs(string cur,int cnt)
 int main()
 {
     cin>>n>>k;
-    if(k==n.size())
-    {
-        putchar('0');
-        return 0;
-    }
     ans.insert(0,255,'9');
     dfs(n,0);
     cout<<ans;
