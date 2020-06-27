@@ -1,40 +1,38 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
+int n,goal,front=1,rear=1,a[201];
+bool vis[201];
 struct node
 {
-    int floor,cnt;
+    int floor,step;
 }q[2001];
-int n,a,b,front=1,rear=1,c[201],flag;
-bool visit[201];
-void f(int s)
-{
-    if(s<=n&&s>0&&!visit[s])
-    {
-        q[++rear].floor=s;
-        q[rear].cnt=q[front].cnt+1;
-        visit[s]=1;
-        if(s==b)
-        {
-            cout<<q[rear].cnt;
-            flag=1;
-        }
-    }
-}
 int main()
 {
-    cin>>n>>a>>b;
-    if(a==b)
+    scanf("%d%d%d",&n,&q[1].floor,&goal);
+    if(goal==q[1].floor)
     {
-        cout<<0;
+        putchar('0');
         return 0;
     }
-    for(int i=1;i<=n;i++)cin>>c[i];
-    q[1].floor=a;
-    while(front<=rear&&!flag)
+    for(int i=1;i<=n;i++)scanf("%d",&a[i]);
+    while(front<=rear)
     {
-        f(q[front].floor+c[q[front].floor]);
-        f(q[front].floor-c[q[front].floor]);
+        node f=q[front];
+        int d[]={a[f.floor],-a[f.floor]};
+        for(int i=0;i<2;i++)
+        {
+            node r=(node){f.floor+d[i],f.step+1};
+            if(r.floor>n||r.floor<1||vis[r.floor])continue;
+            q[++rear]=r;
+            vis[r.floor]=true;
+            if(r.floor==goal)
+            {
+                printf("%d",r.step);
+                return 0;
+            }
+        }
         front++;
     }
-    if(!flag)cout<<-1;
+    puts("-1");
+    return 0;
 }
