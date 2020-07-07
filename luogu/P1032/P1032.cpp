@@ -7,7 +7,7 @@ struct node
 {
     string cur;
     int step;
-}q[2250001];
+}q[2200001];
 int main()
 {
     while(cin>>s[n][0]>>s[n][1])n++;
