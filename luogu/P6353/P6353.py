@@ -1,0 +1,1 @@
+print('%o' % int(str(input()), base = 2))
