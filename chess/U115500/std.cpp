@@ -2,7 +2,7 @@
 using namespace std;
 map<char,int>piece;
 int n,attack[6];
-char board[9][9],king,kingx,kingy,name[]={'\0','R','B','Q','N','P'};  
+char board[10][10],king,kingx,kingy,name[]={'\0','R','B','Q','N','P'};  
 namespace check
 {
     bool pawn(int x,int y)
