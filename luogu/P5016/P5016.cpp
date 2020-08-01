@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include<bits/stdc++.h>
 int n,m,p1,s1,s2,ans,c[100001];
 long long a,b,mins,start;
 int read()
