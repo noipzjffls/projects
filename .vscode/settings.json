@@ -85,6 +85,12 @@
         "utility": "cpp",
         "valarray": "cpp",
         "vector": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "any": "cpp",
+        "charconv": "cpp",
+        "codecvt": "cpp",
+        "shared_mutex": "cpp",
+        "variant": "cpp",
+        "__functional_03": "cpp"
     }
 }
