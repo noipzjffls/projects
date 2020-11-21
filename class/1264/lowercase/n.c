@@ -1,7 +1,7 @@
 /*
 User: shenyouran
 Problem: 2120
-Algorithm: Graph Theory, Shortest Path
+Algorithm: Graph Theory, Shortest Path, Dijkstra
 Language: C/C++
 Record ID: 76216
 Submit Time: 2020-11-21 15:28:28
